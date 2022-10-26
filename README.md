@@ -17,7 +17,6 @@ The most important folders are `scripts/` and `shared_folder/`, the other being 
 * `hostap/` contains the C code from hostap v2.10 Release, with the additional modifications we did. 
 * `scripts/` contains the scripts to run our tests: functional (by comparing outputs to OpenSSL) and performance are available.
 * `shared_folder/` is used to share data (*e.g.* results from benchmarks) between the container and your host.
-* `src/` contains the code snippets from hostapd/wpa_suplicant that is used to establish an SAE/SAE-PT handshake. Both a version for OpenSSL and HaCl* are available.
 
 ## Run the PoC
 
