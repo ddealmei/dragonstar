@@ -43,7 +43,8 @@ RUN make CONFIG_CRYPTO=openssl CONFIG_PERF=y clean && make -j CONFIG_CRYPTO=open
 RUN make CONFIG_CRYPTO=openssl_noasm clean && make -j CONFIG_CRYPTO=openssl_noasm
 RUN make CONFIG_CRYPTO=openssl_noasm CONFIG_PERF=y clean && make -j CONFIG_CRYPTO=openssl_noasm CONFIG_PERF=y
 
-ENV HACL_PATH ./haclstar/gcc-compatible/
+ENV HACL_PATH /home/poc_user/PoC/haclstar/gcc-compatible/
 ENV LD_LIBRARY_PATH $HACL_PATH:$LD_LIBRARY_PATH
+RUN echo $HACL_PATH | sudo tee /etc/ld.so.conf.d/hacl.conf && sudo ldconfig
 
 WORKDIR /home/${user}/PoC/
